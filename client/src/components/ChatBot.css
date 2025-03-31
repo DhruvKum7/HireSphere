@@ -1,0 +1,54 @@
+.loader {
+    width: 10px;
+    height: 10px;
+    /* Reduced dot size */
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+    0% {
+        box-shadow: 15px 0 #000, -15px 0 rgba(243, 242, 242, 0.133);
+        background: #000;
+    }
+    33% {
+        box-shadow: 15px 0 #000, -15px 0 rgba(111, 110, 110, 0.133);
+        background: #888;
+        /* Light gray to simulate loading */
+    }
+    66% {
+        box-shadow: 15px 0 #0002, -15px 0 #000;
+        background: #bbb;
+        /* Lighter gray */
+    }
+    100% {
+        box-shadow: 15px 0 #0002, -15px 0 white;
+        background: white;
+        /* Transition to white */
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite ease-in-out;
+}
